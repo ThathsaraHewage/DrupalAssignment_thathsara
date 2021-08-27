@@ -1,0 +1,5 @@
+name: Admin Form
+description: 'Custom Module for adding data to the db - thathsara v2.0'
+package: Custom
+type: module
+core: 8.x

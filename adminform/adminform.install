@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * create table mytable
+ */
+function adminform_schema() {
+  $schema['mytable'] = array(
+    'fields' => array(
+      'id' => array(
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'title' => array(
+        'type' => 'varchar',
+        'length' => 32,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'fid' => array(
+        'type' => 'int',
+        'length' => 20,
+        'not null' => FALSE,
+      ),
+    ),
+    'primary key' => array(
+      'id',
+    ),
+  );
+
+  return $schema;
+
+}

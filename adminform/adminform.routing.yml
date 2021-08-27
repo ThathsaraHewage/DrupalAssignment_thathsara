@@ -1,0 +1,31 @@
+adminform.display_data:
+  path: '/admin/adminform/index'
+  defaults:
+    _controller: '\Drupal\adminform\Controller\DisplayTableController::index'
+    _title: 'All menu bar data is here'
+  requirements:
+    _permission: 'access content'
+
+adminform.show_data:
+  path: '/admin/adminform/{id}/show'
+  defaults:
+    _controller: '\Drupal\adminform\Controller\DataController::show'
+    _title: 'Data of the selected Row'
+  requirements:
+    _permission: 'access content'
+
+adminform.delete_form:
+  path: '/admin/adminform/{id}/delete'
+  defaults:
+    _form: '\Drupal\adminform\Form\DeleteForm'
+    _title: 'Delete menu bar data'
+  requirements:
+    _access: 'TRUE'
+
+adminform.add_form:
+  path: '/admin/add'
+  defaults:
+    _title: 'Add or Edit menu bar data'
+    _form: '\Drupal\adminform\Form\AdminForm'
+  requirements:
+    _permission: 'access content'
